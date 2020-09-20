@@ -47,9 +47,7 @@ Run npm test to run tests and get a text summary of the results + code coverage.
 
 Run npm run tests:dev to run tests in watch mode, allowing to debug issues and live rerun the test on code changes.
 
-Running git commit will initiate a pre-commit hook which will ensure code styling using prettier.
+Running git commit
 
-Running git push will initiate a CI/CD process which executes linting, testing, prod build and push prod build to GitHub Pages.
-
-#CI/CD
+Running git push 
 
