@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'app.pages.editprofile.title.header' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile">
+  <ion-card class="ion-no-margin">
+    <ion-card-content class="bg-profile">
+      <img src="assets/img/avatar.jpeg">
+      <h1 class="fw500">Sai Krishna</h1>
+      <h2 color="light" class="ion-margin-bottom">Customer</h2>
+      <ion-button icon-left color="secondary">
+        <ion-icon name="images" slot="start"></ion-icon> 
+        {{ 'app.label.edit' | translate }} / {{ 'app.label.insertavatar' | translate }}
+      </ion-button>
+    </ion-card-content>
+  
+    <ion-grid fixed class="ion-no-padding">
+      <ion-row>
+        <ion-col size="12" class="ion-padding">
+
+          <ion-list class="ion-margin-bottom">
+            <ion-list-header color="light">
+              <ion-label class="fw700">{{ 'app.label.userdata' | translate }}</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label color="dark" position="stacked">{{ 'app.label.fullname' | translate }}:</ion-label>
+              <ion-input inputmode="text" placeholder="Ex..: Joe Doe" value="Sai Krishna"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark" position="stacked">{{ 'app.label.email' | translate }}:</ion-label>
+              <ion-input inputmode="email" placeholder="Ex.: joe@doe.com" value="saikrishna.bop@gmail.com"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark" position="stacked">{{ 'app.label.address' | translate }}:</ion-label>
+              <ion-input inputmode="text" placeholder="Ex.: D.No.50-39-9/1, TPT Colony, Seethammadhara, Visakhapatnam."></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark">{{ 'app.label.city' | translate }}</ion-label>
+              <ion-select>
+                <ion-select-option value="nes">Visakhapatnam</ion-select-option>
+                <ion-select-option value="n64">Hyderabad</ion-select-option>
+              </ion-select>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark">{{ 'app.label.state' | translate }}</ion-label>
+              <ion-select>
+                <ion-select-option value="nes">Andhra Pradesh</ion-select-option>
+                <ion-select-option value="n64">Telangana</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-button class="ion-no-margin" size="large" expand="full" color="dark" (click)="sendData()">{{ 'app.label.edit' | translate }}</ion-button>
+  </ion-card>
+</ion-content>
